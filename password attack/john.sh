@@ -72,7 +72,7 @@ fcrackzip_tool(){
                                 echo "Error: ${w} file not found."
                                 wordlist_file
                             else
-                                echo "Press Enter to continue..."
+                                read -p "Press Enter to continue..." e5
                                 main
                             fi
                         fi
