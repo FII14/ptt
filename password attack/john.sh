@@ -9,3 +9,5 @@ fcrackzip(){
         fi
     }
 }
+
+fcrackzip
