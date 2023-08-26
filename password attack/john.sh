@@ -11,7 +11,7 @@ fcrackzip(){
                 echo "Error: ${z} file not found."
                 zip_file
             else
-                if [[ -f ${z} ]] && [[ ${z##*.} == "zip" ]]; then
+                if [[ -f ${z} && ${z##*.} == "zip" ]]; then
                     fcrackzip --help
                     exit 0
                 else
