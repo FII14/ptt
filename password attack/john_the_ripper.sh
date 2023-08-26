@@ -1,5 +1,15 @@
 john_the_ripper() {
     clear
+    echo ""
+    echo "########################################################################"
+    echo "# John The Ripper                                                      #"                                                   
+    echo "########################################################################"
+    echo "# John the Ripper is a widely used open-source password cracking tool. #"
+    echo "# It's designed to test the security of password-protected systems by  #"
+    echo "# attempting to crack password hashes using various methods, like      #"
+    echo "# dictionary attacks and brute force.                                  #"
+    echo "########################################################################"
+    echo ""
     hash_file() {
         read -p "Enter the path to the hash file: " h
         if [[ -z ${h} ]]; then
