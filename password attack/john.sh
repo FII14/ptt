@@ -62,6 +62,7 @@ main(){
                             echo "Error: ${t5} tool not available."
                             a5
                         fi
+                    fi
                 }
                 a5
         fi
