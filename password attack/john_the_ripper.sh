@@ -19,7 +19,8 @@ john_the_ripper(){
                                 wordlist_file
                             else
                                 if [[ -f ${w} ]]; then
-                                    sukses
+                                    john --format=${f} --wordlist=${w} ${h}
+                                    john --show ${h}
                                 else
                                     echo "Error: ${w} file not found."
                                     wordlist_file
