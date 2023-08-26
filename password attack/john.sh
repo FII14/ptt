@@ -12,8 +12,21 @@ fcrackzip_tool(){
                 zip_file
             else
                 if [[ -f ${z} && ${z##*.} == "zip" ]]; then
-                    fcrackzip --help
-                    exit 0
+                    wordlist_file(){
+                        read -p "Enter the path to the wordlist file: " w
+                        if [[ -z ${w} ]]; then
+                            echo "Error: ${w} file cannot be empty."
+                            wordlist_file
+                        else
+                            if [[ ! -f ${w} ]]; then
+                                echo "Error: ${w} file not found."
+                                wordlist_file
+                            else
+                                echo "sukses"
+                                exit 0
+                            fi
+                    }
+                    wordlist_file
                 else
                     echo "${z} file is not a zip file."
                     zip_file
