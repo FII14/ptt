@@ -45,7 +45,7 @@ ncrack_(){
                                             if [[ ${l} == "1" ]]; then
                                                 exit 0
                                             elif  [[ ${l} == "2" ]]; then
-                                                ncrack -U ${n} -p ${k} "${h}:22" -v
+                                                ncrack -U ${n} --pass ${k} "${h}:22" -v
                                             else
                                                 echo "Kesalahan: layanan ${l} tidak tersedia."
                                                 layanan 
