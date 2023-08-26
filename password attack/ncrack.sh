@@ -36,6 +36,7 @@ ncrack_(){
                                     exit 0
                                 else
                                     layanan(){
+                                    daftar_layanan
                                         read -p "Masukkan layanan yang ingin diserang: " l
                                         if [[ -z ${l} ]]; then
                                             echo "Kesalahan: layanan tidak boleh kosong."
