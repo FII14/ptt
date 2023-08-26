@@ -36,7 +36,7 @@ main(){
             elif [[ ${c} == "3" ]]; then
                 echo "Currently under development."
                 exit 0
-            elif [[ ${c} == "5" ]]; then
+            elif [[ ${c} == "4" ]]; then
                 echo "Currently under development."
                 exit 0
             elif [[ ${c} == "5" ]]; then
