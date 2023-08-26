@@ -1,6 +1,7 @@
 #!/bin/bash
 
 main(){
+    clear
     echo ""
     echo "(0) Exit"
     echo "(1) Information Gathering"
@@ -23,6 +24,13 @@ main(){
     if [[ ${c} == "0" ]]; then
         echo "Wish you monday always."
         exit 0
+    elif [[ ${c} == "5" ]]; then
+        clear
+        echo ""
+        echo "(0) Exit"
+        echo "(1) Fcrackzip"
+        echo "(99) Back"
+        echo ""
     fi
 }
 
