@@ -23,7 +23,47 @@ main(){
         read -p "Enter the tool category: " c
         if [[ -z ${c} ]]; then
             echo "Error: tool category cannot be empty."
-            ac0
+            a0
+        else
+            if [[ ${c} == "0" ]]; then
+                exit 0
+            elif [[ ${c} == "1" ]]; then
+                echo "Currently under development."
+                exit 0
+            elif [[ ${c} == "2" ]]; then
+                echo "Currently under development."
+                exit 0 
+            elif [[ ${c} == "3" ]]; then
+                echo "Currently under development."
+                exit 0
+            elif [[ ${c} == "5" ]]; then
+                echo "Currently under development."
+                exit 0
+            elif [[ ${c} == "5" ]]; then
+                clear
+                echo ""
+                echo "(0) Exit"
+                echo "(1) Fcrackzip"
+                echo "(99) Back"
+                echo ""
+                a5(){
+                    read -p "Enter the tool you want to use: " t5
+                    if [[ -z ${t5} ]]; then
+                        echo "Error: tool cannot be empty."
+                        a5
+                    else
+                        if [[ ${t5} == "0" ]]; then
+                            exit 0
+                        elif [[ ${t5} == "1" ]]; then
+                            fcrackzip_tool
+                        elif [[ ${t5} == "99" ]]; then
+                            main
+                        else
+                            echo "Error: ${t5} tool not available."
+                            a5
+                        fi
+                }
+                a5
         fi
     }
     a0
