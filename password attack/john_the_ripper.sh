@@ -6,21 +6,30 @@ john_the_ripper(){
             hash_file
         else
             if [[ -f ${h} ]]; then
-                wordlist_file(){
-                    read -p "Enter the path to the wordlist file: " w
-                    if [[ -z ${w} ]]; then
-                        echo "Error: wordlist file cannot be empty."
-                        wordlist_file
+                format(){
+                    read -p "Enter the format: " f
+                    if [[ -z ${f} ]]; then
+                        echo "Error: format cannot be empty."
+                        format
                     else
-                        if [[ -f ${w} ]]; then
-                            sukses
-                        else
-                            echo "Error: ${w} file not found."
-                            wordlist_file
-                        fi
+                        wordlist_file(){
+                            read -p "Enter the path to the wordlist file: " w
+                            if [[ -z ${w} ]]; then
+                                echo "Error: wordlist file cannot be empty."
+                                wordlist_file
+                            else
+                                if [[ -f ${w} ]]; then
+                                    sukses
+                                else
+                                    echo "Error: ${w} file not found."
+                                    wordlist_file
+                               fi
+                            fi
+                        }
+                        wordlist_file
                     fi
                 }
-                wordlist_file
+                format
             else
                 echo "${h} file not found."
                 hash_file
