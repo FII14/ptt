@@ -19,35 +19,14 @@ main(){
     echo "(13) Social Engineering Tools"
     echo ""
 
-    read -p "Enter the tool category: " c
-
-    if [[ ${c} == "0" ]]; then
-        echo "Wish you monday always."
-        exit 0
-    elif [[ ${c} == "5" ]]; then
-        clear
-        echo ""
-        echo "(0) Exit"
-        echo "(1) Fcrackzip"
-        echo "(99) Back"
-        echo ""
-        a5(){
-            read -p "Enter the tool you want to use: " t
-            if [[ ${t} == "0" ]]; then
-                echo "Wish you monday always."
-                exit 0
-            elif [[ ${t} == "1" ]]; then
-                fcrackzip_tool
-            elif [[ ${t} == "99" ]]; then
-                main
-            else
-                echo "Error: ${t} tool doesn't exist."
-                a5
-            fi
-        }
-        a5
-        
-    fi
+    a0{
+        read -p "Enter the tool category: " c
+        if [[ -z ${c} ]]; then
+            echo "Error: tool category cannot be empty."
+            ac0
+        fi
+    }
+    a0
 }
 
 fcrackzip_tool(){
