@@ -1,5 +1,25 @@
 #!/bin/bash
 
+main(){
+    echo ""
+    echo "(1) Information Gathering"
+    echo "(2) Vunerability Analysis"
+    echo "(3) Web Application Analysis"
+    echo "(4) Database Assessment"
+    echo "(5) Password Attack"
+    echo "(6) Wireless Attack"
+    echo "(7) Reverse Engineering"
+    echo "(8) Explotation Tools"
+    echo "(9) Sniffing & spoofing"
+    echo "(10) Post Explotation"
+    echo "(11) Forensics"
+    echo "(12) Reporting Tools"
+    echo "(13) Social Engineering Tools"
+    echo ""
+
+    read -p "Enter the tool category: " category
+}
+
 fcrackzip_tool(){
     zip_file(){
         read -p "Enter the path to the zip file: " z
@@ -38,4 +58,4 @@ fcrackzip_tool(){
     zip_file
 }
 
-fcrackzip_tool
+main
