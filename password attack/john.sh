@@ -25,6 +25,7 @@ fcrackzip_tool(){
                                 echo "sukses"
                                 exit 0
                             fi
+                        fi
                     }
                     wordlist_file
                 else
