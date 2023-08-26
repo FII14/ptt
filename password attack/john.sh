@@ -93,6 +93,7 @@ fcrackzip_tool(){
                                 echo "Error: ${w} file not found."
                                 wordlist_file
                             else
+                                fcrackzip -v -u -D -p ${w} ${z}
                                 read -p "Press Enter to continue..." e5
                                 main
                             fi
