@@ -65,6 +65,7 @@ main(){
                     fi
                 }
                 a5
+            fi
         fi
     }
     a0
