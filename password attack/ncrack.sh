@@ -13,8 +13,46 @@ ncrack_(){
                 else
                     # daftar kata (wordlist)
                     if [[ -f ${n} ]]; then
-                    
-
+                        kata_sandi(){
+                            read -p "Masukkan kata sandi atau file yang berisi daftar kata sandi: " k
+                            if [[ -z ${k} ]]; then
+                                echo "Kesalahan: kata sandi atau file yang berisi daftar kata sandi tidak boleh kosong."
+                                kata_sandi
+                            else
+                                daftar_layanan(){
+                                    echo ""
+                                    echo "(1) RDP"
+                                    echo "(2) SSH"
+                                    echo "(3) http(s)"
+                                    echo "(4) SMB"
+                                    echo "(5) pop3(s)"
+                                    echo "(6) VNC"
+                                    echo "(7) FTP"
+                                    echo "(8) telnet"
+                                    echo ""
+                                }
+                                if [[ -f ${k} ]]; then
+                                    echo "berhasil"
+                                    exit 0
+                                else
+                                    layanan(){
+                                        read -p "Masukkan layanan yang ingin diserang: " l
+                                        if [[ -z ${l} ]]; then
+                                            echo "Kesalahan: layanan tidak boleh kosong."
+                                            layanan
+                                        else
+                                            if [[ ${l} == "1" ]]; then
+                                                exit 0
+                                            elif  [[ ${l} == "2" ]]; then
+                                                ncrack -U ${n} -p ${k} "${h}:22" -v
+                                            fi
+                                        fi
+                                    }
+                                    layanan 
+                                fi
+                            fi
+                        }
+                        kata_sandi
                     fi
                 fi
             }
