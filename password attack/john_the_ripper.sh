@@ -21,7 +21,9 @@ john_the_ripper() {
                                 if [[ -f ${w} ]]; then
                                     john --format=${f} --wordlist=${w} ${h}
                                     john --show ${h}
+                                    echo ""
                                     read -p "Press Enter to continue..." e
+                                    echo ""
                                     bash script.sh
                                 else
                                     echo "Error: ${w} file not found."
