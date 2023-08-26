@@ -2,6 +2,7 @@
 
 main(){
     echo ""
+    echo "(0) Exit"
     echo "(1) Information Gathering"
     echo "(2) Vunerability Analysis"
     echo "(3) Web Application Analysis"
@@ -18,6 +19,11 @@ main(){
     echo ""
 
     read -p "Enter the tool category: " category
+
+    if [[ ${c} == "0" ]]; then
+        echo "Wish you monday always."
+        exit 0
+    fi
 }
 
 fcrackzip_tool(){
