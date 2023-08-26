@@ -31,7 +31,7 @@ main(){
         echo "(1) Fcrackzip"
         echo "(99) Back"
         echo ""
-        a(){
+        a5(){
             read -p "Enter the tool you want to use: " t
             if [[ ${t} == "0" ]]; then
                 echo "Wish you monday always."
@@ -42,10 +42,10 @@ main(){
                 main
             else
                 echo "Error: ${t} tool doesn't exist."
-                a
+                a5
             fi
         }
-        a
+        a5
         
     fi
 }
