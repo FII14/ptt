@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fcrackzip(){
+fcrackzip_tool(){
     zip_file(){
         read -p "Enter the path to the zip file: " z
         if [[ -z ${z} ]]; then
@@ -24,4 +24,4 @@ fcrackzip(){
     zip_file
 }
 
-fcrackzip
+fcrackzip_tool
