@@ -57,6 +57,8 @@ main(){
                             exit 0
                         elif [[ ${t5} == "1" ]]; then
                             fcrackzip_tool
+                        elif [[ ${t5} == "2" ]]; then
+                            ncrack_tool
                         elif [[ ${t5} == "99" ]]; then
                             main
                         else
