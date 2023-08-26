@@ -18,7 +18,7 @@ main(){
     echo "(13) Social Engineering Tools"
     echo ""
 
-    read -p "Enter the tool category: " category
+    read -p "Enter the tool category: " c
 
     if [[ ${c} == "0" ]]; then
         echo "Wish you monday always."
