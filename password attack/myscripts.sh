@@ -95,7 +95,7 @@ fcrackzip_tool(){
                                 wordlist_file
                             else
                                 fcrackzip -v -u -D -p ${w} ${z}
-                                read -p "Press Enter to continue..." e5
+                                read -p "Press Enter to continue..." e51
                                 main
                             fi
                         fi
@@ -109,6 +109,56 @@ fcrackzip_tool(){
         fi
     }
     zip_file
+}
+
+ncrack_tool(){
+    host(){
+        read -p "Enter the host you want to attack: " h
+        if [[ -z ${h} ]]; then
+            echo "Error: host cannot be empty."
+            host
+        else
+            username(){
+                read -p "Enter a username or a file containing a list of usernames: " u
+                if [[ -z ${u} ]]; then
+                    echo "Error: username cannot be empty."
+                    username
+                else
+                    if [[ -f ${u} ]]; then
+                        password(){
+                            read -p "Enter the password or a file containing a list of passwords: " p
+                            if [[ -z ${p} ]]; then
+                                echo "Error: password cannot be empty."
+                                password
+                            else
+                                if [[ -f ${p} ]]; then
+                                    service(){
+                                        read -p "Enter the service you want to attack: " s
+                                        if [[ -z ${s} ]]; then
+                                            echo "Error: service cannot be empty."
+                                            service
+                                        else
+                                            if [[ ${s} == "0" ]]; then
+                                                exit 
+                                            elif [[ ${s} == "1" ]]; then
+                                                ncrack -U ${u} -P ${p} "${h}:22"
+                                                read -p "Press Enter to continue..." e52
+                                                main
+                                            fi
+                                        fi
+                                    }
+                                    service 
+                                fi
+                            fi
+                        }
+                        password 
+                    fi
+                fi
+            }
+            username 
+        fi
+    }
+    host 
 }
 
 main
