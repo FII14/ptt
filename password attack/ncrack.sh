@@ -45,7 +45,7 @@ alat_hydra(){
                                             if [[ ${l} == "1" ]]; then
                                                 exit 0
                                             elif  [[ ${l} == "2" ]]; then
-                                                hydra -L ${n} -p ${k} ${h} -s 22 -t 4
+                                                hydra -L ${n} -p ${k} ${h} -s 22 -t 4 ssh -V
                                             else
                                                 echo "Kesalahan: layanan ${l} tidak tersedia."
                                                 layanan 
