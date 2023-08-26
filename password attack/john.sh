@@ -44,6 +44,7 @@ main(){
                 echo ""
                 echo "(0) Exit"
                 echo "(1) Fcrackzip"
+                echo "(2) Ncrack"
                 echo "(99) Back"
                 echo ""
                 a5(){
