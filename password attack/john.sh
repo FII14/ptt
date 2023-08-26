@@ -8,6 +8,7 @@ fcrackzip(){
             zip_file
         fi
     }
+    zip_file
 }
 
 fcrackzip
