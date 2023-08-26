@@ -45,6 +45,7 @@ main(){
                 a
             fi
         }
+        a
         
     fi
 }
