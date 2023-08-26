@@ -31,6 +31,21 @@ main(){
         echo "(1) Fcrackzip"
         echo "(99) Back"
         echo ""
+        a(){
+            read -p "Enter the tool you want to use: " t
+            if [[ ${t} == "0" ]]; then
+                echo "Wish you monday always."
+                exit 0
+            elif [[ ${t} == "1" ]]; then
+                fcrackzip_tool
+            elif [[ ${t} == "99" ]]; then
+                main
+            else
+                echo "Error: ${t} tool doesn't exist."
+                a
+            fi
+        }
+        
     fi
 }
 
