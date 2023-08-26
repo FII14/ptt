@@ -19,7 +19,7 @@ main(){
     echo "(13) Social Engineering Tools"
     echo ""
 
-    a0{
+    a0(){
         read -p "Enter the tool category: " c
         if [[ -z ${c} ]]; then
             echo "Error: tool category cannot be empty."
