@@ -45,6 +45,9 @@ ncrack_(){
                                                 exit 0
                                             elif  [[ ${l} == "2" ]]; then
                                                 ncrack -U ${n} -p ${k} "${h}:22" -v
+                                            else
+                                                echo "Kesalahan: layanan ${l} tidak tersedia."
+                                                layanan 
                                             fi
                                         fi
                                     }
@@ -61,3 +64,5 @@ ncrack_(){
     }
     host 
 }
+
+ncrack_
