@@ -1,4 +1,5 @@
 john_the_ripper() {
+    clear
     hash_file() {
         read -p "Enter the path to the hash file: " h
         if [[ -z ${h} ]]; then
