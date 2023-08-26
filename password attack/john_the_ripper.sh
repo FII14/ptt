@@ -14,3 +14,5 @@ john_the_ripper(){
     }
     hash_file
 }
+
+john_the_ripper
