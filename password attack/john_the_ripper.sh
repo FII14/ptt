@@ -8,6 +8,16 @@ john_the_ripper() {
         else
             if [[ -f ${h} ]]; then
                 format() {
+                    echo ""
+                    echo "(1) descrypt"
+                    echo "(2) bsdicrypt"
+                    echo "(3) md5crypt"
+                    echo "(4) md5crypt-long"
+                    echo "(5) bcrypt"
+                    echo "(6) scrypt"
+                    echo "(7) LM"
+                    echo "(8) AFS"
+                    echo ""
                     read -p "Enter the format: " f
                     if [[ -z ${f} ]]; then
                         echo "Error: format cannot be empty."
