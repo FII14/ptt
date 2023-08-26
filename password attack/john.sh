@@ -72,8 +72,8 @@ fcrackzip_tool(){
                                 echo "Error: ${w} file not found."
                                 wordlist_file
                             else
-                                echo "sukses"
-                                exit 0
+                                echo "Press Enter to continue..."
+                                main
                             fi
                         fi
                     }
